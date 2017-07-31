@@ -1,5 +1,5 @@
-# N1 Theme Starter
-The N1 Theme Starter is a basic starter for any theme you want to create for [Nylas N1](http://www.nylas.com/n1), the extensible, open-source email client.
+# N1 Numix Theme
+This is a fork of the Nylas N1 theme starter with a Numix color palette
 
 ## Getting Started
 Creating a new theme in N1 is easy! Here's how you can do it.

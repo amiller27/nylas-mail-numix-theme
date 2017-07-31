@@ -3,7 +3,53 @@
 //=============================== Components ===========================//
 
 //== Toolbar
-@toolbar-background-color: darken(@white, 17.5%);
+@toolbar-background-color: #444;
+
+.sheet-toolbar {
+  .btn-toolbar {
+    background-color: #525252;
+  }
+
+  .item-back {
+    background-color: transparent;
+  }
+
+  .btn-toolbar,
+  .item-back {
+    background-image: none;
+    border-color: rgba(0, 0, 0, 0.22);
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.22);
+
+    &:focus {
+      background-color: #626262;
+      background-image: none;
+      border-color: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.42);
+    }
+
+    img.content-mask {
+      background-color: #eee;
+    }
+
+    .item-back-title {
+      color: #eee;
+    }
+  }
+}
+
+.layout-mode-popout .sheet-toolbar {
+  display: none;
+}
+
+.sheet-toolbar-container {
+  background-image: none;
+  background-color: @toolbar-background-color;
+  box-shadow: none;
+}
+
+body.is-blurred .sheet-toolbar-container {
+  background-image: none;
+}
 
 //== Account Sidebar
 @panel-background-color:         @gray-lighter;
@@ -23,15 +69,15 @@
 @list-selected-border:     mix(@component-active-color, @list-bg, 50%);
 
 //== Notifications
-@background-color-info: @blue-light;
+@background-color-info: #d64937;
 @background-color-success: #009ec4;
 @background-color-warning: #ff4800;
 @background-color-error: #f15f4b;
 @background-color-pending: #b4babd;
 
 //== Menus
-@menu-item-color-hover: fade(@blue-light, 10%);
-@menu-item-color-selected: @blue-light;
+@menu-item-color-hover: fade(#d64937, 10%);
+@menu-item-color-selected: #d64937;
 @menu-text-color-selected: @text-color-inverse;
 
 //== Sizes
@@ -45,15 +91,15 @@
 
 //=============================== Colors ===============================//
 
-@accent-primary:      @blue;
-@accent-primary-dark: @blue-dark;
+@accent-primary:      #d64937;
+@accent-primary-dark: #d64937;
 
 @background-primary:     @white;
 @background-off-primary: #fdfdfd;
-@background-secondary:   #f6f6f6;
-@background-tertiary:    #6d7987;
+@background-secondary:   #dedede;
+@background-tertiary:    #707070;
 
-@color-info:    @blue-dark;
+@color-info:    #d64937;
 @color-success: #5CB346;
 @color-warning: #f0ad4e;
 @color-error:   #d9534f;
@@ -62,8 +108,7 @@
 @component-active-color:        @accent-primary-dark;
 @component-active-bg:           @background-primary;
 
-@background-gradient: linear-gradient(to top, rgba(241,241,241,0.75) 0%,
-rgba(253,253,253,0.75) 100%);
+@background-gradient: linear-gradient(to bottom, #444, #444);
 
 @border-color-primary: darken(@background-primary, 10%);
 @border-color-secondary: darken(@background-secondary, 10%);
